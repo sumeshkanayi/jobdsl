@@ -1,4 +1,4 @@
-pipelineJob("myPipeline"){
+pipelineJob("Webapp"){
 definition{
 cpsScm{
 
