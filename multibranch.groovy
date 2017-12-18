@@ -19,6 +19,8 @@ if (myFolder) {
 else {
 
     println("not present")
+    projectRootArray=projectRoot.split("/")
+    print projectRootArray
 }
 
 
