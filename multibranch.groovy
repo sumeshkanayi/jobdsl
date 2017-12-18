@@ -9,7 +9,7 @@ splitProjectNameToPathAndRepo.pop()
 projectRoot=splitProjectNameToPathAndRepo.join("/")
 
 
-String gitHost = 'ssh://blah'
+String gitHost = 'ssh://git@git-sb.sumesh.com'
 
 
 
@@ -65,7 +65,7 @@ folder(projectRoot) {
     multibranchPipelineJob(projectRoot + '/' + repoName) {
         branchSources {
             git {
-                remote(gitHost + '/' + projectRoot + '/' + repoName + '.git')
+                remote(gitHost + '/' + projectName + '/' + '.git')
                 credentialsId('gitlab_public_deploy_key')
             }
         }
