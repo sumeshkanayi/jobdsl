@@ -21,6 +21,13 @@ else {
     println("not present")
     projectRootArray=projectRoot.split("/")
     print projectRootArray
+    initialpath=""
+    projectRootArray.each {
+
+        folderPresence=Jenkins.instance.getItem(it)
+        print folderPresence
+
+    }
 }
 
 
