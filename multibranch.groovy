@@ -2,9 +2,19 @@ import jenkins.model.Jenkins
 import hudson.model.Item
 import hudson.model.Items
 
-String projectRoot = 'glob/dex/dt'
+    projectName="global/america/podo/dim.duck.type"
+    splitProjectNameToPathAndRepo=projectName.split("/")
+    repoName=splitProjectNameToPathAndRepo(-1)
+    splitProjectNameToPathAndRepo=splitProjectNameToPathAndRepo.pop()
+    projectRoot=splitProjectNameToPathAndRepo.join("/")
 
-String gitHost = 'ssh://'
+
+    String gitHost = 'ssh://blah'
+
+
+
+
+
 String FOLDER_CREDENTIALS_PROPERTY_NAME = 'com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider$FolderCredentialsProperty'
 
 Node folderCredentialsPropertyNode
@@ -51,10 +61,7 @@ folder(projectRoot) {
 
   }
 }
-[
-    'com.rxcorp.dt4.web',
-        'com.rxcorp.dt9.webs'
-].eachWithIndex { repoName, index ->
+
     multibranchPipelineJob(projectRoot + '/' + repoName) {
         branchSources {
             git {
@@ -68,4 +75,4 @@ folder(projectRoot) {
             }
         }
     }
-}
+
