@@ -1,3 +1,3 @@
-@Library('devops')
+import seed.devops.Utilities
 
-create_multibranch_job()
+create_multibranch_job("blah/blah/com.rxcorp.test")
