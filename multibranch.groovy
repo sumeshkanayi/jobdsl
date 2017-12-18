@@ -65,7 +65,7 @@ folder(projectRoot) {
     multibranchPipelineJob(projectRoot + '/' + repoName) {
         branchSources {
             git {
-                remote(gitHost + '/' + projectName + '/' + '.git')
+                remote(gitHost + '/' + projectName  + '.git')
                 credentialsId('gitlab_public_deploy_key')
             }
         }
