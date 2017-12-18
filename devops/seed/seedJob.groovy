@@ -7,9 +7,9 @@ class seedJob {
 
     static void  create_multibranch_job() {
 
-        projectName = "global/us/bdf/com.rxcorp.sample"
-        splitProjectNameToPathAndRepo = projectName.tokenize("/")
-        repoName = splitProjectNameToPathAndRepo[-1]
+        def projectName = "global/us/bdf/com.rxcorp.sample"
+        def splitProjectNameToPathAndRepo = projectName.tokenize("/")
+        def repoName = splitProjectNameToPathAndRepo[-1]
         splitProjectNameToPathAndRepo.pop()
         projectRoot = splitProjectNameToPathAndRepo.join("/")
 
