@@ -140,8 +140,8 @@ public class seedJob {
         dslFactory.pipelineJob(projectRoot + '/' + repoName) {
             
             definition {
-        cps {
-            dslFactory.script(readFileFromWorkspace('JenkinsFile'))
+        dslFactory.cps {
+           script(readFileFromWorkspace('JenkinsFile'))
             
         }
     }
