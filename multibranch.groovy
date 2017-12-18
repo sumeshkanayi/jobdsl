@@ -24,7 +24,7 @@ else {
 
     folderWalk=""
     projectRootArray.each {
-        folderWalk=initialpath+"/"+it
+        folderWalk=folderWalk+"/"+it
         folderPresence=Jenkins.instance.getItem(folderWalk)
         if (folderPresence==null){
             folder(folderWalk){
