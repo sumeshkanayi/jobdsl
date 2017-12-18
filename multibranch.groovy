@@ -29,7 +29,8 @@ else {
         if (folderPresence==null){
             folder(initialpath){
 
-                displayName it
+                println(it)
+                print(initialpath)
             }
 
 
