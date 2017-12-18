@@ -138,6 +138,15 @@ public class seedJob {
 
 
         dslFactory.pipelineJob(projectRoot + '/' + repoName) {
+            
+            definition {
+        cps {
+            script(readFileFromWorkspace('JenkinsFile'))
+            
+        }
+    }
+            
+            
              scm {
                 git {
                     remote{
