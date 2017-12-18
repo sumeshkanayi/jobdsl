@@ -137,7 +137,7 @@ public class seedJob {
         }
 
 
-        dslFactory.PipelineJob(projectRoot + '/' + repoName) {
+        dslFactory.pipelineJob(projectRoot + '/' + repoName) {
             branchSources {
                 git {
                     remote(gitHost + '/' + projectRoot + '/' + repoName + '.git')
