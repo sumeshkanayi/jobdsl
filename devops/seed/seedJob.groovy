@@ -5,7 +5,7 @@ import hudson.model.Items
 
 public class seedJob {
 
-    public static void create_multibranch_job(def dslFactory,def projectName) {
+    public static void create_multibranch(def dslFactory,def projectName) {
 
         
         def splitProjectNameToPathAndRepo = projectName.tokenize("/")
@@ -80,7 +80,7 @@ public class seedJob {
     
     
     
-      public static void create_pipeline_job(def dslFactory,def projectName) {
+      public static void create_pipeline(def dslFactory,def projectName) {
           
           
         def splitProjectNameToPathAndRepo = projectName.tokenize("/")
