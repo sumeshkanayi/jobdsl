@@ -141,7 +141,7 @@ public class seedJob {
             
             definition {
         cps {
-            script(readFileFromWorkspace('JenkinsFile'))
+            dslFactory.script(readFileFromWorkspace('JenkinsFile'))
             
         }
     }
