@@ -5,7 +5,7 @@ import hudson.model.Items
 
 class seedJob {
 
-    static void  create_multibranch_job(def projectName) {
+    static void  create_multibranch_job(xx,projectName) {
 
         //def projectName = "global/us/bdf/com.rxcorp.sample"
         def splitProjectNameToPathAndRepo = projectName.tokenize("/")
@@ -38,7 +38,7 @@ class seedJob {
                 folderWalk = folderWalk + "/" + it
                 def folderPresence = Jenkins.instance.getItem(folderWalk)
                 if (folderPresence == null) {
-                    folder(folderWalk) {
+                    xx.folder(folderWalk) {
 
 
                     }
@@ -51,7 +51,7 @@ class seedJob {
         }
 
 
-        folder(projectRoot) {
+        xx.folder(projectRoot) {
             if (folderCredentialsPropertyNode) {
                 configure { project ->
                     project / 'properties' << folderCredentialsPropertyNode
