@@ -35,7 +35,7 @@ class seedJob {
 
             String folderWalk = ""
             projectRootArray.each {
-                def folderWalk = folderWalk + "/" + it
+                folderWalk = folderWalk + "/" + it
                 def folderPresence = Jenkins.instance.getItem(folderWalk)
                 if (folderPresence == null) {
                     folder(folderWalk) {
