@@ -22,7 +22,7 @@ else {
 
     projectRootArray=projectRoot.split("/")
 
-    initialpath=""
+    folderWalk=""
     projectRootArray.each {
         folderWalk=initialpath+"/"+it
         folderPresence=Jenkins.instance.getItem(folderWalk)
