@@ -15,6 +15,13 @@ if (myFolder) {
     folderCredentialsPropertyNode = new XmlParser().parseText(xml)
   }
 }
+
+else {
+
+    println("not present")
+}
+
+
 folder(projectRoot) {
   if (folderCredentialsPropertyNode) {
     configure { project ->
