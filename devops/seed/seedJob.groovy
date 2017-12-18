@@ -31,12 +31,12 @@ class seedJob {
         } else {
 
 
-            projectRootArray = projectRoot.split("/")
+            def projectRootArray = projectRoot.split("/")
 
             String folderWalk = ""
             projectRootArray.each {
-                folderWalk = folderWalk + "/" + it
-                folderPresence = Jenkins.instance.getItem(folderWalk)
+                def folderWalk = folderWalk + "/" + it
+                def folderPresence = Jenkins.instance.getItem(folderWalk)
                 if (folderPresence == null) {
                     folder(folderWalk) {
 
