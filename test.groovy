@@ -1,4 +1,4 @@
 import devops.seed.seedJob
 
-seedJob.create_multibranch_job('global/us/bdf/com.rxcorp.sample')
+seedJob.create_multibranch_job(this)
 
