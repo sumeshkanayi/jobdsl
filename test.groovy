@@ -1,3 +1,3 @@
-import seed.devops.Utilities
+@Library('utils') import seed.devops.Utilities
 
 create_multibranch_job("blah/blah/com.rxcorp.test")
