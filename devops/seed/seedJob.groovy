@@ -80,6 +80,71 @@ public class seedJob {
     
     
     
+      public static void create_pipeline_job(def dslFactory,def projectName) {
+          
+          
+               dslFactory.pipelineJob(projectName) {
+                   
+                   definition{
+cpsScm{
+
+scm{
+git{
+remote{
+url(gitHost + '/' + projectRoot + '/' + repoName + '.git')
+
+
+}
+
+
+
+}
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+}
+
+
+
+
+
+          
+                   
+                   
+                   
+    }
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+      }
+    
             
         }
     
