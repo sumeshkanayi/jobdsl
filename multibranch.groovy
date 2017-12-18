@@ -2,14 +2,14 @@ import jenkins.model.Jenkins
 import hudson.model.Item
 import hudson.model.Items
 
-    projectName="global/america/podo/dim.duck.type"
-    splitProjectNameToPathAndRepo=projectName.tokenize("/")
-    repoName=splitProjectNameToPathAndRepo(-1)
-    splitProjectNameToPathAndRepo=splitProjectNameToPathAndRepo.pop()
-    projectRoot=splitProjectNameToPathAndRepo.join("/")
+projectName="global/us/bdf/com.rxcorp.sample"
+splitProjectNameToPathAndRepo=projectName.tokenize("/")
+repoName=splitProjectNameToPathAndRepo[-1]
+splitProjectNameToPathAndRepo.pop()
+projectRoot=splitProjectNameToPathAndRepo.join("/")
 
 
-    String gitHost = 'ssh://blah'
+String gitHost = 'ssh://blah'
 
 
 
