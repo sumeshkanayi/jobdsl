@@ -5,9 +5,9 @@ import hudson.model.Items
 
 class seedJob {
 
-    static void  create_multibranch_job() {
+    static void  create_multibranch_job(String projectName) {
 
-        def projectName = "global/us/bdf/com.rxcorp.sample"
+        //def projectName = "global/us/bdf/com.rxcorp.sample"
         def splitProjectNameToPathAndRepo = projectName.tokenize("/")
         def repoName = splitProjectNameToPathAndRepo[-1]
         splitProjectNameToPathAndRepo.pop()
