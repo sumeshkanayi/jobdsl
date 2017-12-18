@@ -138,17 +138,19 @@ public class seedJob {
 
 
         dslFactory.pipelineJob(projectRoot + '/' + repoName) {
-            branchSources {
+             scm {
                 git {
-                    remote(gitHost + '/' + projectRoot + '/' + repoName + '.git')
-                    credentialsId('gitlab_public_deploy_key')
+                    remote{
+                     url(gitHost + '/' + projectRoot + '/' + repoName + '.git') 
+                     refspec('master')
+                     
+                    }
+                    
+                    
                 }
             }
-            orphanedItemStrategy {
-                discardOldItems {
-                    numToKeep(5)
-                }
-            }
+        }
+            
         }
     }
 
