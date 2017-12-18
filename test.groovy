@@ -1,4 +1,4 @@
 import devops.seed.seedJob
 
-new seedJob(this).create_multibranch_job()
+new seedJob(seedJob).create_multibranch_job()
 
