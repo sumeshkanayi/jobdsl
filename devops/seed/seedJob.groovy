@@ -63,7 +63,7 @@ public class seedJob {
         }
 
 
-        multibranchPipelineJob(projectRoot + '/' + repoName) {
+        dslFactory.multibranchPipelineJob(projectRoot + '/' + repoName) {
             branchSources {
                 git {
                     remote(gitHost + '/' + projectRoot + '/' + repoName + '.git')
