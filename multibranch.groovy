@@ -2,7 +2,7 @@ import jenkins.model.Jenkins
 import hudson.model.Item
 import hudson.model.Items
 
-String projectRoot = 'global/us/bdf/dt4'
+String projectRoot = 'global/us/bdx/dt8'
 
 String gitHost = 'ssh://'
 String FOLDER_CREDENTIALS_PROPERTY_NAME = 'com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider$FolderCredentialsProperty'
