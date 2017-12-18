@@ -2,7 +2,7 @@ import jenkins.model.Jenkins
 import hudson.model.Item
 import hudson.model.Items
 
-String projectRoot = 'global/us/bdx/dt8'
+String projectRoot = 'glob/dex/dt'
 
 String gitHost = 'ssh://'
 String FOLDER_CREDENTIALS_PROPERTY_NAME = 'com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider$FolderCredentialsProperty'
@@ -19,18 +19,17 @@ if (myFolder) {
 
 else {
 
-    println("not present")
+
     projectRootArray=projectRoot.split("/")
-    print projectRootArray
+
     initialpath=""
     projectRootArray.each {
-        initialpath=initialpath+"/"+it
-        folderPresence=Jenkins.instance.getItem(initialpath)
+        folderWalk=initialpath+"/"+it
+        folderPresence=Jenkins.instance.getItem(folderWalk)
         if (folderPresence==null){
-            folder(initialpath){
+            folder(folderWalk){
 
-                println(it)
-                print(initialpath)
+
             }
 
 
@@ -53,7 +52,8 @@ folder(projectRoot) {
   }
 }
 [
-    'com.rxcorp.dt4.web'
+    'com.rxcorp.dt4.web',
+        'com.rxcorp.dt9.webs'
 ].eachWithIndex { repoName, index ->
     multibranchPipelineJob(projectRoot + '/' + repoName) {
         branchSources {
