@@ -2,8 +2,8 @@ import jenkins.model.Jenkins
 import hudson.model.Item
 import hudson.model.Items
 
-//String projectRoot = 'global/us/bdf/dt4'
-String projectRoot = 'koi/poocha'
+String projectRoot = 'global/us/bdf/dt4'
+
 String gitHost = 'ssh://'
 String FOLDER_CREDENTIALS_PROPERTY_NAME = 'com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider$FolderCredentialsProperty'
 
@@ -24,9 +24,18 @@ else {
     print projectRootArray
     initialpath=""
     projectRootArray.each {
+        initialpath=initialpath+"/"+it
+        folderPresence=Jenkins.instance.getItem(initialpath)
+        if (folderPresence==null){
+            folder(initialpath){
 
-        folderPresence=Jenkins.instance.getItem(it)
-        print folderPresence
+                displayName it
+            }
+
+
+        }
+
+
 
     }
 }
