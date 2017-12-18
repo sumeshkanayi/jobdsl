@@ -3,9 +3,9 @@ import jenkins.model.Jenkins
 import hudson.model.Item
 import hudson.model.Items
 
-class seedJob {
+public class seedJob {
 
-    def create_multibranch_job(def dslFactory) {
+    public static void create_multibranch_job(def dslFactory) {
 
         def projectName = "global/us/bdf/com.rxcorp.sample"
         def splitProjectNameToPathAndRepo = projectName.tokenize("/")
