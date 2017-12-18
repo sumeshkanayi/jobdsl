@@ -3,7 +3,7 @@ import hudson.model.Item
 import hudson.model.Items
 
     projectName="global/america/podo/dim.duck.type"
-    splitProjectNameToPathAndRepo=projectName.split("/")
+    splitProjectNameToPathAndRepo=projectName.tokenize("/")
     repoName=splitProjectNameToPathAndRepo(-1)
     splitProjectNameToPathAndRepo=splitProjectNameToPathAndRepo.pop()
     projectRoot=splitProjectNameToPathAndRepo.join("/")
