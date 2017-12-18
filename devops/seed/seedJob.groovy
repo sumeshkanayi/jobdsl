@@ -11,7 +11,7 @@ class seedJob {
         def splitProjectNameToPathAndRepo = projectName.tokenize("/")
         def repoName = splitProjectNameToPathAndRepo[-1]
         splitProjectNameToPathAndRepo.pop()
-        projectRoot = splitProjectNameToPathAndRepo.join("/")
+        def projectRoot = splitProjectNameToPathAndRepo.join("/")
 
 
         String gitHost = 'ssh://git@git-sb.sumesh.com'
