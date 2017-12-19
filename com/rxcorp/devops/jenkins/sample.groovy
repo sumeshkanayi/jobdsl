@@ -8,13 +8,18 @@ import hudson.model.Items
  */
 class sample {
 
-    public static void createFolder(def justAnObject){
+    public static void createFolder(def justAnObject,def jobname){
 
-        justAnObject.folder("Hello"){
+        justAnObject.folder(jobname){
 
 
         }
 
+    }
+
+    public static void caller(def name){
+
+        createFolder(this,name)
     }
 
 }
