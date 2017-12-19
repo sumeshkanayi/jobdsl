@@ -108,6 +108,7 @@ class SeedJob {
         def projectMap=this.set_naming_convention_right(projectName)
         def projectRoot=projectMap["projectRoot"]
         def gitHost = projectMap["gitHost"]
+        def repoName=projectMap["repoName"]
 
         String FOLDER_CREDENTIALS_PROPERTY_NAME = 'com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider$FolderCredentialsProperty'
 
