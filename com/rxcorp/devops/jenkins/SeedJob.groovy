@@ -18,21 +18,8 @@ class SeedJob {
 
 
     }
-    public static void set_jekins_folder(){
+    public static void set_jekins_folder(def justAnoObject,def projectRoot){
 
-
-    }
-
-    public static void create_multibranch(def dslFactory,def projectName) {
-
-
-        Map projectMap=this.set_naming_convention_right(projectName)
-        def projectRoot=projectMap["projectRoot"]
-        def repoName=projectMap["repoName"]
-        def gitHost = projectMap["gitHost"]
-
-        print projectMap
-        println(projectRoot)
 
 
 
@@ -56,7 +43,7 @@ class SeedJob {
                 folderWalk = folderWalk + "/" + it
                 def folderPresence = Jenkins.instance.getItem(folderWalk)
                 if (folderPresence == null) {
-                    dslFactory.folder(folderWalk) {
+                    justAnoObject.folder(folderWalk) {
 
 
                     }
@@ -69,7 +56,7 @@ class SeedJob {
         }
 
 
-        dslFactory.folder(projectRoot) {
+        justAnoObject.folder(projectRoot) {
             if (folderCredentialsPropertyNode) {
                 configure { project ->
                     project / 'properties' << folderCredentialsPropertyNode
@@ -79,6 +66,31 @@ class SeedJob {
 
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    public static void create_multibranch(def dslFactory,def projectName) {
+
+
+        Map projectMap=this.set_naming_convention_right(projectName)
+        def projectRoot=projectMap["projectRoot"]
+        def repoName=projectMap["repoName"]
+        def gitHost = projectMap["gitHost"]
+        set_jekins_folder(dslFactory,projectRoot)
+
+
 
 
         dslFactory.multibranchPipelineJob(projectRoot + '/' + repoName) {
