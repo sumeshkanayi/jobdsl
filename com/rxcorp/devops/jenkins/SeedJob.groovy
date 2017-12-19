@@ -28,10 +28,13 @@ class SeedJob {
     public static void create_multibranch(def dslFactory,def projectName) {
 
 
-       def projectMap=this.set_naming_convention_right(projectName)
+       Map projectMap=this.set_naming_convention_right(projectName)
         def projectRoot=projectMap["projectRoot"]
         def repoName=projectMap["repoName"]
         def gitHost = projectMap["gitHost"]
+
+        print projectMap
+        println(projectRoot)
 
 
 
