@@ -91,7 +91,7 @@ class SeedJob {
         def projectRoot=projectMap["projectRoot"]
         def repoName=projectMap["repoName"]
         def gitHost = projectMap["gitHost"]
-        setup_jekins_folder(this,projectRoot)
+        setup_jekins_folder(dslFactory,projectRoot)
 
 
 
