@@ -14,7 +14,7 @@ class SeedJob {
         def repoName = splitProjectNameToPathAndRepo[-1]
         splitProjectNameToPathAndRepo.pop()
         def projectRoot = splitProjectNameToPathAndRepo.join("/")
-        return [proectRoot:projectRoot,repoName:repoName,gitHost:'ssh://git@git-sb.rxcorp.com']
+        return [projectRoot:projectRoot,repoName:repoName,gitHost:'ssh://git@git-sb.rxcorp.com']
 
 
     }
