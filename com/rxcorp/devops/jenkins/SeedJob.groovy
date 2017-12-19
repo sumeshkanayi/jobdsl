@@ -1,4 +1,7 @@
 package com.rxcorp.devops.jenkins
+import jenkins.model.Jenkins
+import hudson.model.Item
+import hudson.model.Items
 
 /**
  * Created by Sumesh on 01/12/17.
