@@ -5,7 +5,7 @@ import com.rxcorp.devops.jenkins.sample
 
 //SeedJob.create_pipeline(this,'global/devops/us/india/com.rxcorp.testx')
 
-sample.createFolder(this)
+sample.createFolder(this,"poocha")
 
 
 
