@@ -8,9 +8,9 @@ import hudson.model.Items
  */
 class sample {
 
-    public static void createFolder(def dslFactoryxxx){
+    public static void createFolder(def justAnObject){
 
-        dslFactoryxxx.folder("Hello"){
+        justAnObject.folder("Hello"){
 
 
         }
